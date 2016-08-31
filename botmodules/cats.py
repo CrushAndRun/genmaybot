@@ -11,7 +11,7 @@ def get_cat(self, e):
 get_cat.command = "+cats"
 
 def get_mixomatosys(self, e):
-    e.output ="i'm not sure hwat you're point is"
+    e.output ="i'm not sure what you're point is"
     return e
 get_mixomatosys.command = "+mixy"
 
