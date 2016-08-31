@@ -83,6 +83,6 @@ def new_poll(self, event):
         t.start()
         
     return event
-new_poll.command = "!poll"
-new_poll.helptext = "Usage: !poll [<minutes>] <poll question> [options: <options>]\nExample: !poll 2 Should I go to bed?\nCreates a 2 minute long yes or no poll for the channel\nExample #2: !poll 2 What should I eat? options: pizza!, chicken!, burger!\nCreates a 2 minute poll with custom vote options"
+new_poll.command = "+poll"
+new_poll.helptext = "Usage: +poll [<minutes>] <poll question> [options: <options>]\nExample: +poll 2 Should I go to bed?\nCreates a 2 minute long yes or no poll for the channel\nExample #2: +poll 2 What should I eat? options: pizza!, chicken!, burger!\nCreates a 2 minute poll with custom vote options"
 
