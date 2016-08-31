@@ -17,5 +17,5 @@ def get_woot(self, e):
     e.output = product + " [" + price + "] " + link
     return e
 
-get_woot.command = "!woot"
-get_woot.helptext = "Usage: !woot\nShows today's deal from woot.com"
+get_woot.command = "+woot"
+get_woot.helptext = "Usage: +woot\nShows today's deal from woot.com"
