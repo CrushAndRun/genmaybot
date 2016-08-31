@@ -24,5 +24,5 @@ def gwiki(bot, e):
          e.output = "%s [ %s ]" % (content, url)
       return e
     
-gwiki.command = "!gwiki"
-gwiki.helptext = "!gwiki <query> - attempts to look up what you want to know on wikipedia using google's synopsis context"
+gwiki.command = "+gwiki"
+gwiki.helptext = "+gwiki <query> - attempts to look up what you want to know on wikipedia using google's synopsis context"
