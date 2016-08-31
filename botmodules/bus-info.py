@@ -23,4 +23,4 @@ def get_bus_times(self, e):
     e.output = output    
     return e
 
-get_bus_times.command="!bus"
+get_bus_times.command="+bus"
