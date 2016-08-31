@@ -160,6 +160,6 @@ def last_link(self, e):
     e.output = "[ " + url + " ] " + get_title(self, e, url)
     return e
 
-last_link.command = "!lastlink"
-last_link.helptext = "Usage: \002!lastlink\002" \
+last_link.command = "+lastlink"
+last_link.helptext = "Usage: \002+lastlink\002" \
                      "Shows the last URL that was posted in the channel"
