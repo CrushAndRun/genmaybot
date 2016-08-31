@@ -103,10 +103,10 @@ def advocate_beer(self, e):
                                                                            abv, cals,
                                                                            self.tools['shorten_url'](url))
     return e
-advocate_beer.command = "!ba"
+advocate_beer.command = "+ba"
 advocate_beer.helptext = """\
-Usage: !ba <beer name>
-Example: !ba pliny the elder
+Usage: +ba <beer name>
+Example: +ba pliny the elder
 Finds a given beer on beeradvocate.com and returns user ratings and beer info"""
 
 def request_json(url):
@@ -187,8 +187,8 @@ def untappd_beer_search(self, e):
 
 
 
-untappd_beer_search.command = "!beer"
+untappd_beer_search.command = "+beer"
 untappd_beer_search.helptext = """\
-Usage: !beer <beer name>
-Example: !beer pliny the elder
+Usage: +beer <beer name>
+Example: +beer pliny the elder
 Finds a given beer on Untappd and returns user ratings and beer info"""
