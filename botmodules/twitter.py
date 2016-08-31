@@ -42,14 +42,14 @@ def latest_breaking(self, e):
     text, updated, ago = read_timeline('breakingnews')
     e.output =  "%s (%s minutes ago) " % (text, ago)
     return e
-latest_breaking.command = "!breaking"
-latest_breaking.helptext = "Usage: !breaking\nShows the latest breaking news alert"
+latest_breaking.command = "+breaking"
+latest_breaking.helptext = "Usage: +breaking\nShows the latest breaking news alert"
 
 def latest_tweet(self, e):
     text, updated, ago = read_timeline(e.input)
     e.output =  "%s (%s minutes ago) " % (text, ago)
     return e
-latest_tweet.command = "!lasttweet"
+latest_tweet.command = "+lasttweet"
 
 def breaking_alert():
     #returns a new breaking news only if it hasn't returned it before
