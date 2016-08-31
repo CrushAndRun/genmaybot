@@ -36,6 +36,6 @@ def get_fml(self, e):
 
     return e
 
-get_fml.command = "!fml"
-get_fml.helptext = "Usage: !fml\nShows a random entry from fmylife.com"
+get_fml.command = "+fml"
+get_fml.helptext = "Usage: +fml\nShows a random entry from fmylife.com"
 
