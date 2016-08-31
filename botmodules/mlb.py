@@ -92,5 +92,5 @@ def mlb_schedule(self, e):
 
     return e
 
-mlb_schedule.command = '!mlb'
+mlb_schedule.command = '+mlb'
 #mlb_schedule({}, {})
