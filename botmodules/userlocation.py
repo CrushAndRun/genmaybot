@@ -13,8 +13,8 @@ def set_location(self, e):
     conn.commit()
     c.close()
 
-set_location.command = "!setlocation"
-set_location.helptext = "Usage: !setlocation <location>\nExample: !setlocation hell, mi\nSaves your geographical location in the bot.\nUseful for the location based commands (!sunset, !sunrise, !w).\nOnce your location is saved you can use those commands without an argument."
+set_location.command = "+setlocation"
+set_location.helptext = "Usage: +setlocation <location>\nExample: +setlocation hell, mi\nSaves your geographical location in the bot.\nUseful for the location based commands (+sunset, +sunrise, +w).\nOnce your location is saved you can use those commands without an argument."
     
 def get_location(nick):
     conn = sqlite3.connect('userlocations.sqlite')
@@ -67,7 +67,7 @@ def get_geoIP_location(self, e="", ip="", nick="", whois_reply=False, callback="
     else:
         request_whoisIP(self, get_geoIP_location, nick, e)
     
-get_geoIP_location.command = "!geoip"
+get_geoIP_location.command = "+geoip"
 get_geoIP_location.callback = None
 get_geoIP_location.helptext = "Looks up your IP address and attempts to return a location based on it."
 
