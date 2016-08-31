@@ -32,6 +32,6 @@ def get_nhl_live_games(self, e, webCall=False):
     e.output = " | ".join(games)
     return e
 
-get_nhl_live_games.command = "!nhl"
-get_nhl_live_games.helptext = "Usage: !nhl Shows today's hockey games and current scores"
+get_nhl_live_games.command = "+nhl"
+get_nhl_live_games.helptext = "Usage: +nhl Shows today's hockey games and current scores"
 get_nhl_live_games.webExposed = True 
