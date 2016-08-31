@@ -177,5 +177,5 @@ def get_stocks_prices(stocks):## pass in a list or tuple or a single string
       
 	
 
-portfolio.command = "!portfolio"
-portfolio.helptext = "!portfolio ADD <symbol> <# of shares> <price> - to add stocks to your portfolio \n!portfolio LIST - will list all your stocks and gains\n!portfolio - show only the gains and values\n!portfolio DEL <id> - use the ID number given in !portfolio list"
+portfolio.command = "+portfolio"
+portfolio.helptext = "+portfolio ADD <symbol> <# of shares> <price> - to add stocks to your portfolio \n+portfolio LIST - will list all your stocks and gains\n+portfolio - show only the gains and values\n+portfolio DEL <id> - use the ID number given in +portfolio list"
