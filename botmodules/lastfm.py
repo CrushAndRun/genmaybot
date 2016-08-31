@@ -15,10 +15,10 @@ def setlastfmuser(self, e):
     c.execute("""insert into lastfm values (?,?)""", (e.nick.lower(), e.input))
     conn.commit()
     c.close()
-setlastfmuser.command = "!setlastfm"
-setlastfmuser.helptext = """Usage: !setlastfm <last.fm username>
-Example: !setlastfm jbeiber
-Sets your last.fm username so you can use the !np and !compare commands without needing to provide your username"""
+setlastfmuser.command = "+setlastfm"
+setlastfmuser.helptext = """Usage: +setlastfm <last.fm username>
+Example: +setlastfm nickolulz
+Sets your last.fm username so you can use the +np and +compare commands without needing to provide your username"""
 
 def nowplaying(self, e):
     conn = sqlite3.connect('lastfm.sqlite')
@@ -80,20 +80,20 @@ def nowplaying(self, e):
                 yt = ""
             e.output = "%s is not playing a track, but last played: %s - %s on %s%s" % (lastfmuser, artist, trackname, played, yt)
     else:
-        e.output = "You don't have a last.fm user set up - use !setlastfm <username>"
+        e.output = "You don't have a last.fm user set up - use +setlastfm <username>"
 
     return e
-nowplaying.command = "!np"
-nowplaying.helptext = """Usage: !np or !np <last.fm username/IRC nick>
-Example: !np
-Shows your currently playing trak on last.fm. To use !np without arguments your username must be set up first with !setlastfm"""
+nowplaying.command = "+np"
+nowplaying.helptext = """Usage: +np or +np <last.fm username/IRC nick>
+Example: +np
+Shows your currently playing trak on last.fm. To use +np without arguments your username must be set up first with +setlastfm"""
 
 #def np(self, e):
 #    self.irccontext.privmsg("Angstserv", "deprotect {} {}".format(e.source, e.nick))
 #    time.sleep(1)
 #    self.irccontext.mode(e.source, '+b {}'.format(e.hostmask))
-#    self.irccontext.kick(e.source, e.nick, "Congratulations! You found the word of the day, courtesy of !np")
-#np.command = "!np"
+#    self.irccontext.kick(e.source, e.nick, "Congratulations! You found the word of the day, courtesy of +np")
+#np.command = "+np"
 
 def get_trackinfo(apikey, artist, trackname, userid):
     artist = urllib.parse.quote(artist)
@@ -121,7 +121,7 @@ def compare(self, e):
             else:
                 user2 = e.input
         else:
-            e.output = "you don't have a last.fm user set up - use !setlastfm <username>"
+            e.output = "you don't have a last.fm user set up - use +setlastfm <username>"
     elif len(e.input.split(" ")) == 2:
         var1 = e.input.split(" ")[0]
         var2 = e.input.split(" ")[1]
@@ -155,7 +155,7 @@ def compare(self, e):
         e.output = "Matching %s and %s :: Score: %s - Artists (%s matches): %s" % (user1, user2, score, artistmatches, artists)
 
     return e
-compare.command = "!compare"
-compare.helptext = """Usage: !compare <last.fm user/IRC nick> or !compare <last.fm username/IRC nick #1> <last.fm username/IRC nick #2>
-Example: !compare jbieber jeffers
-Compares your last.fm musical tastes with another user. A single argument compares your !setlastfm user with the specified user, 2 arguments compares the specified users."""
+compare.command = "+compare"
+compare.helptext = """Usage: +compare <last.fm user/IRC nick> or +compare <last.fm username/IRC nick #1> <last.fm username/IRC nick #2>
+Example: +compare nickolulz ircdorque
+Compares your last.fm musical tastes with another user. A single argument compares your +setlastfm user with the specified user, 2 arguments compares the specified users."""
