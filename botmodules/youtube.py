@@ -68,8 +68,8 @@ def ytinfo(self, e, urlposted=False):
                                                                                             pubdate,
                                                                                             ytlink, content)
     return e
-ytinfo.command = "!yt"
+ytinfo.command = "+yt"
 ytinfo.helptext = """
-Usage: !yt <vide title>
-Example: !yt cad video
+Usage: +yt <vide title>
+Example: +yt cad video
 Looks up a given youtube video, and provides information and a link"""
