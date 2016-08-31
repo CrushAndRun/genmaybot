@@ -286,10 +286,10 @@ def strava_set_athlete(self, e):
         self.irccontext.privmsg(e.nick, "Usage: !strava set <strava id>")
 
 
-#strava_set_athlete.command = "!strava-set"
+#strava_set_athlete.command = "+strava-set"
 #strava_set_athlete.helptext = """
-#                        Usage: !strava-set <strava id>
-#                        Example: !strava-set 12345
+#                        Usage: +strava-set <strava id>
+#                        Example: +strava-set 12345
 #                        Saves your Strava ID to the bot.
 #                        Once your Strava ID is saved you can use those commands without an argument."""
 
@@ -304,9 +304,9 @@ def strava_reset_athlete(self, e):
         self.irccontext.privmsg(e.nick, "You don't even have a Strava ID set, why would you want to reset it?")
 
 
-#strava_reset_athlete.command = "!strava-reset"
+#strava_reset_athlete.command = "+strava-reset"
 #strava_reset_athlete.helptext = """
-#                        Usage: !strava-reset
+#                        Usage: +strava-reset
 #                        Removes your Strava ID from the bot."""
 
 
@@ -369,10 +369,10 @@ def strava(self, e):
     return e
 
 
-#strava.command = "!strava"
+#strava.command = "+strava"
 #strava.helptext = """
-#                        Usage: !strava [strava id]"
-#                        Example: !strava-last, !strava-last 12345
+#                        Usage: +strava [strava id]"
+#                        Example: +strava-last, !strava-last 12345
 #                        Gets the information about the last ride for the Strava user.
 #                        If you have a Strava ID set with !strava-set you can use this command without an arguement.
 #                        """
@@ -459,16 +459,16 @@ def strava_achievements(self, e):
     return e
 
 
-#strava_achievements.command = "!strava-achievements"
-strava_achievements.helptext = """Usage: !strava-achievements [ride id]. Gets the achievements for a Ride ID"""
+#strava_achievements.command = "+strava-achievements"
+strava_achievements.helptext = """Usage: +strava-achievements [ride id]. Gets the achievements for a Ride ID"""
 
 #==== begin beardedwizard
 def strava_parent(self, e):
     strava_command_handler(self,e)
     return e
 
-strava_parent.command = "!strava"
-strava_parent.helptext = "Fetch last ride: \"!strava [optional nick]\", Set your ID: \"!strava set <athelete id>\", Reset your ID: \"!strava reset\", List achievements for a ride: \"!strava achievements <ride id>\", Allow the bot to read your private rides: \"!strava auth\""
+strava_parent.command = "+strava"
+strava_parent.helptext = "Fetch last ride: \"+strava [optional nick]\", Set your ID: \"+strava set <athelete id>\", Reset your ID: \"+strava reset\", List achievements for a ride: \"+strava achievements <ride id>\", Allow the bot to read your private rides: \"+strava auth\""
 
 def strava_help(self, e):
     e.output += strava_parent.helptext
