@@ -9,8 +9,8 @@ def get_quake(self, e):
     updated, quakestring = get_quake_data()
     e.output = quakestring
     return e
-get_quake.command = "!q"
-get_quake.helptext = "Usage: !q\nShows the latest earthquake larger than M2.5 and how long ago it occured"
+get_quake.command = "+q"
+get_quake.helptext = "Usage: +q\nShows the latest earthquake larger than M2.5 and how long ago it occured"
 
 
 def quake_alert():
