@@ -176,9 +176,9 @@ def cooldown_command(line, nick, self, c):
                 self.commandcooldownlast[command] = time.time() - cooldown
                 return command + " cooldown set to " + str(cooldown) + " seconds (set to 0 to disable)"
         else:
-            return "bad format: 'cooldown !wiki 30' (30 second cooldown on !wiki)"
+            return "bad format: 'cooldown +wiki 30' (30 second cooldown on +wiki)"
     else:
-        return "not enough perameters: cooldown !command ##"
+        return "not enough perameters: cooldown +command <time in seconds>"
 cooldown_command.admincommand = "cooldown"
 
 def command_status(line, nick, self, c):
@@ -227,7 +227,7 @@ def say_cmd(line, nick, self, c):
 		c.privmsg(chan, words)
 		return "Said %s to %s" % (words, chan)
 	else:
-		return "Correct syntax: say [#channel/nickname] I hate you!"
+		return "Correct syntax: say [#channel|nickname] <intended text>"
 say_cmd.admincommand="say"
 
 def show_channels(line, nck, self, c):
