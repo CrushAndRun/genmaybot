@@ -43,10 +43,10 @@ def get_wiki(self, e, urlposted=False, forcemediawiki=False):
 
     e.output = title
     return e
-get_wiki.command = "!wiki"
+get_wiki.command = "+wiki"
 get_wiki.helptext = """\
-Usage: !wiki <search term>
-Example: !wiki carl sagan
+Usage: +wiki <search term>
+Example: +wiki carl sagan
 Shows the first couple of sentences of a wikipedia entry for the given search term"""""
 
 
