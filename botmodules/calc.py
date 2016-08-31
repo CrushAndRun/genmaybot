@@ -24,11 +24,11 @@ def google_convert(self, e):
             e.output = result
     except Exception as inst: 
         traceback.print_exc()
-        print("!c " + term + " : " + str(inst))
+        print("+c " + term + " : " + str(inst))
         e = None
     
     return e
-#google_convert.command = "!c"
-#google_convert.lastresult = {}
-#google_convert.helptext = "Usage: !c <calculator or conversion query>\nExample: !c 42 fathoms per second to mph\nSends a query to Google Calculator and returns the result.\nCan also be used for currency exchange conversions: !c 1USD to CAD"
+google_convert.command = "+c"
+google_convert.lastresult = {}
+google_convert.helptext = "Usage: +c <calculator or conversion query>\nExample: +c 42 fathoms per second to mph\nSends a query to Google Calculator and returns the result.\nCan also be used for currency exchange conversions: +c 1USD to CAD"
 
