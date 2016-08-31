@@ -78,10 +78,10 @@ def seen(self, e):
         c.close()
     return e
 
-seen.command = "!seen"
+seen.command = "+seen"
 seen.helptext = """\
-Usage: !seen <nick>
-Example: !seen jeffers
+Usage: +seen <nick>
+Example: +seen ircdorque
 Shows the last line the <nick> said and how long ago"""
 
 
@@ -108,8 +108,8 @@ def whomentioned(self, e):
     e.source = e.nick
     e.notice = True
     return e
-whomentioned.command = "!whopaged"
+whomentioned.command = "+whopaged"
 whomentioned.helptext = """\
-Usage: !whopaged [Optional nick]
-Example: !whopaged jeffers
+Usage: +whopaged [Optional nick]
+Example: +whopaged nickolulz
 Shows the last line where someone mentioned the given name. If nick isn't supplied it checks your nick."""
