@@ -58,8 +58,8 @@ def google_news(self, e):
 
     return e
 
-google_news.command = "!news"
-google_news.helptext = "Usage: !news - reports the top story. !news <query> reports news containing the specified words"
+google_news.command = "+news"
+google_news.helptext = "Usage: +news - reports the top story. +news <query> reports news containing the specified words"
 
 def get_breaking(self, e):
     pass
@@ -74,8 +74,8 @@ def npr_science(self, e):
     e.output = description
     return e
 
-npr_science.command="!npr-sci"
-npr_science.helptext="Usage: !npr-sci\nShows the latest entry from the NPR Health and Science RSS feed"
+npr_science.command="+npr-sci"
+npr_science.helptext="Usage: +npr-sci\nShows the latest entry from the NPR Health and Science RSS feed"
 
 def npr_most_emailed(self, e):
     ## Grab the latest entry from the NPR Most Emailed RSS feed
@@ -84,8 +84,8 @@ def npr_most_emailed(self, e):
     e.output = description
     return e
 
-npr_most_emailed.command="!npr-top"
-npr_most_emailed.helptext="Usage: !npr-top\nShows the latest entry from the NPR Most Emailed RSS feed"
+npr_most_emailed.command="+npr-top"
+npr_most_emailed.helptext="Usage: +npr-top\nShows the latest entry from the NPR Most Emailed RSS feed"
 
 def npr_headlines(self, e):
     ## Grab the latest entry from the NPR headlines RSS feed
@@ -94,8 +94,8 @@ def npr_headlines(self, e):
     e.output = description
     return e
 
-npr_headlines.command="!npr"
-npr_headlines.helptext="Usage: !npr\nShows the latest entry from the NPR headlines RSS feed"
+npr_headlines.command="+npr"
+npr_headlines.helptext="Usage: +npr\nShows the latest entry from the NPR headlines RSS feed"
 
 def npr_music(self, e):
 ## Get the latest song of the day from NPR First Listen
@@ -121,5 +121,5 @@ def npr_music(self, e):
 
     return e
 
-npr_music.command="!music"
-npr_music.helptext="Usage: !music\nShows the latest music listing from NPR's Discover Music song of the day"
+npr_music.command="+music"
+npr_music.helptext="Usage: +music\nShows the latest music listing from NPR's Discover Music song of the day"
