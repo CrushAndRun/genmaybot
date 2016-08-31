@@ -7,7 +7,7 @@ def commands_help(bot, e):
       if len(help)>= 460 and (len(help)%460) <= 4:
         help+="\n"
       help+=command + "   "
-    help+="\nUse !help <command> to get more detailed info on each command"
+    help+="\nUse +help <command> to get more detailed info on each command"
     e.output = help
     
   elif command in bot.bangcommands and hasattr(bot.bangcommands[command],"helptext"):
