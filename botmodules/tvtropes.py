@@ -32,4 +32,4 @@ def get_trope(self, e, urlposted=False):
     e.output = trope
     return e
 
-get_trope.command = "!trope"
+get_trope.command = "+trope"
