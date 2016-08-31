@@ -66,7 +66,7 @@ def new_wotd(self, e):
     if e.hostmask == wotd_trigger.wotd_finder:
         newwotd = e.input.strip()
         if len(newwotd.split()) != 1:
-            e.output = "The command usage is: !newwotd <word>"
+            e.output = "The command usage is: +newwotd <word>"
         elif len(newwotd) < 3:
             e.output = "The word must be at least 3 letters long."
         elif newwotd in common_words:
@@ -75,7 +75,7 @@ def new_wotd(self, e):
             wotd_trigger.wotd = newwotd
             wotd_trigger.wotd_setter = e.nick
             wotd_trigger.found = 0
-            e.output = "The word has been set to: {}\nYou can set it again with !newwotd <word> until someone finds it\nIf the word is not found in 24 hours it will be reset".format(newwotd)
+            e.output = "The word has been set to: {}\nYou can set it again with +newwotd <word> until someone finds it\nIf the word is not found in 24 hours it will be reset".format(newwotd)
 
             conn = sqlite3.connect("wotd.sqlite")
             c = conn.cursor()
@@ -89,7 +89,7 @@ def new_wotd(self, e):
             e.output = "You have to find the word of the day if you want to change it."
 
     return e
-new_wotd.command = "!newwotd"
+new_wotd.command = "+newwotd"
 new_wotd.privateonly = True
 new_wotd.helptext = "Use this command in a PM to the bot to set a new word of the day when you find it."
 
@@ -108,7 +108,7 @@ def do_wotd(self, e):
         wotd_trigger.wotd_finder = e.hostmask
         wotd_trigger.wotd_found_timestamp = time.time()
         wotd_trigger.found = 1
-        self.irccontext.privmsg(e.nick, "You can set a new word of the day with the command !newwotd <word>  You have 10 minutes to change the word")
+        self.irccontext.privmsg(e.nick, "You can set a new word of the day with the command +newwotd <word>  You have 10 minutes to change the word")
     ban_user(self, e)
     conn = sqlite3.connect("wotd.sqlite")
     c = conn.cursor()
