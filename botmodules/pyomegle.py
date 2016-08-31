@@ -34,14 +34,14 @@ def startomegle (self, e):
     self.omegleinstance.connect_events(omevent())
     self.omegleinstance.connect(threaded=True)
     #self.omegleinstance.waitForTerminate()
-startomegle.command = "!omegle"
+startomegle.command = "+omegle"
 
 def omeglesay (self, e):
     self.omegleinstance.say(e.input)
-omeglesay.command = "!say"
+omeglesay.command = "+say"
 
 def omegledc (self,e):
     self.omegleinstance.disconnect()
     e.output = "Omegle disconnected"
     return e
-omegledc.command = "!odisconnect"
+omegledc.command = "+odisconnect"
