@@ -38,7 +38,7 @@ def get_rt(self, e):
                                                                 concensus,
                                                                 url)
     return e
-get_rt.command = "!rt"
+get_rt.command = "+rt"
 
 
 def loadjson(url):
