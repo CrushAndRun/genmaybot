@@ -20,8 +20,8 @@ def error_generator(self, e):
     e.output = "%s%s %s %s %s" % (heading, firstword, secondword, thirdword, fourthword)
     return e
 
-error_generator.command = "!error"
-error_generator.helptext = "Usage: !error\nGenerates a random scary-sounding error message"
+error_generator.command = "+error"
+error_generator.helptext = "Usage: +error\nGenerates a random scary-sounding error message"
 
 firstwords = ["Temporary", "Intermittant", "Partial", "Redundant", "Total",
                 "Multiplexed", "Inherent", "Duplicated", "Dual-Homed", "Synchronous",
@@ -64,8 +64,8 @@ def mba_generator(self, e):
     e.output = "%s %s %s" % (verb, adjective, noun)
     return e
 
-mba_generator.command = "!mba"
-mba_generator.helptext = "Usage: !mba\nGenerates random corporate jargon"
+mba_generator.command = "+mba"
+mba_generator.helptext = "Usage: +mba\nGenerates random corporate jargon"
 
 
 def development_generator(self, e):
@@ -76,8 +76,8 @@ def development_generator(self, e):
     return e
 
 
-development_generator.command = "!developers"
-development_generator.helptext = "Usage: !developers\nGenerates random programming engineering bullshit"
+development_generator.command = "+developers"
+development_generator.helptext = "Usage: +developers\nGenerates random programming engineering bullshit"
 
 # Adjectives
 seng_firstwords = ["Sequential", "Downwards", "Structural", "Modified", "Extreme", "Up Front", "Waterfall", "Agile", "Critical", "Flawed",
@@ -99,14 +99,14 @@ def bbnet(self, e):
     
     lols = generatelols()
     if (e.nick.lower().startswith('bbnet')):
-        e.output = "<%s> !bbnet\n^\n%s" % (e.nick, lols)
+        e.output = "<%s> +bbnet\n^\n%s" % (e.nick, lols)
     else:
         e.output = lols
     
    # e.output = "%s %s" % (e.output, lols.__len__())
     return e 
 
-bbnet.command = "!bbnet"
+bbnet.command = "+bbnet"
 
 def generatelols():
     output = ""
@@ -120,8 +120,8 @@ def fortune(self, e):
     e.output = urllib.request.urlopen("http://www.fortunefortoday.com/getfortuneonly.php").read().decode('utf-8').replace('\n', ' ').replace('\r', '').strip()
     return e
 
-fortune.command = "!fortune"
-fortune.helptext = "Usage: just fucking type !fortune"
+fortune.command = "+fortune"
+fortune.helptext = "Usage: just fucking type +fortune"
 
 
 verbs = ["gamify", "aggregate", "architect", "benchmark", "brand", "cultivate", "deliver", "deploy", "disintermediate", "drive",
@@ -196,7 +196,7 @@ def wfl(self, e):
     e.output = "{} {} {} {} {}".format(descr, main, sw, second, serve)
     
     return e
-wfl.command = "!wfl"
+wfl.command = "+wfl"
 wfl.helptext = "Decides what's for lunch"
 
 def cactus(self, e):
@@ -205,12 +205,12 @@ def cactus(self, e):
         return e
     bleh = generateblehs()
     if (e.nick.lower().startswith('cact')):
-        e.output = "<%s> !cactus\n^\n%s" % (e.nick, bleh)
+        e.output = "<%s> +cactus\n^\n%s" % (e.nick, bleh)
     else:
         e.output = bleh
 
     return e
-cactus.command = "!cactus"
+cactus.command = "+cactus"
     
 def generateblehs():
     output = ""
@@ -228,22 +228,22 @@ def brak(self, e):
         rand = random.randint(2, 10)
         e.output = "%s gets %i boiled chickens\n" % (e.nick, rand)
         return e
-brak.command = "!brak"
+brak.command = "+brak"
 
 
 def goodshit(self, e):
         e.output = "👌👀👌👀👌👀👌👀👌👀 good shit go౦ԁ sHit👌 thats ✔ some good👌👌shit right👌👌there👌👌👌 right✔there ✔✔if i do ƽaү so my self 💯 i say so 💯 thats what im talking about right there right there (chorus: ʳᶦᵍʰᵗ ᵗʰᵉʳᵉ) mMMMMᎷМ💯 👌👌 👌НO0ОଠOOOOOОଠଠOoooᵒᵒᵒᵒᵒᵒᵒᵒᵒ👌 👌👌 👌 💯 👌 👀 👀 👀 👌👌Good shit "
         return e
-goodshit.command = "!goodshit"
+goodshit.command = "+goodshit"
 
 def mixomatosys(self, e):
         e.output = "we actually wasnt my friend "
         return e
-mixomatosys.command = "!mixomatosys"
+mixomatosys.command = "+mixomatosys"
 
 def oculus(self, e):
         e.output = "👌👀👌👀👌👀👌👀👌👀 slow ship slo౦w ship👌 thats ✔ some slow👌👌ship right👌👌there👌👌👌 right✔there ✔✔if i do ƽaү so my self 💯 i say so 💯 thats what im talking about right there right there (chorus: ʳᶦᵍʰᵗ ᵗʰᵉʳᵉ) mMMMMᎷМ💯 👌👌 👌НO0ОଠOOOOOОଠଠOoooᵒᵒᵒᵒᵒᵒᵒᵒᵒ👌 👌👌 👌 💯 👌 👀 👀 👀 👌👌slow ship "
         return e
-oculus.command = "!oculus"
+oculus.command = "+oculus"
 
 
