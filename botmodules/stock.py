@@ -35,8 +35,8 @@ def get_stock_quote(self, e):
        e.output = "[%s] %s    %s %s | Cap: %s | Volume (Avg): %s (%s)" % (stock,name.strip(),price,change,mkt_cap.strip(),volume,avg_volume)
        return e
    
-get_stock_quote.command = "!stock"
-get_stock_quote.helptext = "Usage: !stock <ticker symbol>\nExample: !stock GOOG\nShows a quote for the given ticker symbol"
+get_stock_quote.command = "+stock"
+get_stock_quote.helptext = "Usage: +stock <ticker symbol>\nExample: +stock GOOG\nShows a quote for the given ticker symbol"
 
     # http://cliffngan.net/a/13
 #a     Ask             a2     Average Daily Volume     a5     Ask Size
