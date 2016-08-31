@@ -144,11 +144,11 @@ def get_weather(self, e):
     return e
 
 get_weather.waitfor_callback = False
-get_weather.command = "!w"
-get_weather.helptext = """Usage: \002!w <location>\002
-Example: !w hell, mi
+get_weather.command = "+w"
+get_weather.helptext = """Usage: \002+w <location>\002
+Example: +w hell, mi
 Shows weather info from a few different providers.
-Use \002!setlocation <location>\002 to save your location"""
+Use \002+setlocation <location>\002 to save your location"""
    
 def forecast_io(self,e, location=""):
     apikey = self.botconfig["APIkeys"]["forecastIO_APIkey"]
@@ -239,7 +239,7 @@ def forecast_io(self,e, location=""):
                           min_temp_c, outlook)
     return e
 
-forecast_io.command = "!fio"
+forecast_io.command = "+fio"
 
 def get_wwo(self, location, e):
     # WWO weather of place specified in 'zip'
@@ -319,7 +319,7 @@ def get_wwo(self, location, e):
     else:
         return False
 
-get_wwo.command = "!wwo"
+get_wwo.command = "+wwo"
 
 
 def get_weather2(self, e):
@@ -368,8 +368,8 @@ def get_weather2(self, e):
             else:
                 return None
 
-get_weather2.command = "!wu"
-get_weather2.helptext = """Usage: \002!wu <location>\002
-Example: !wu hell, mi
+get_weather2.command = "+wu"
+get_weather2.helptext = """Usage: \002+wu <location>\002
+Example: +wu hell, mi
 Shows weather info from wunderground.com.
-Use \002!setlocation <location>\002 to save your location"""
+Use \002+setlocation <location>\002 to save your location"""
