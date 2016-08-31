@@ -52,12 +52,12 @@ def get_urbandictionary(self, e):
     e.output = first_definition
     return e
 
-get_urbandictionary.command = "!ud"
-get_urbandictionary.helptext = """Usage: !ud <word or phrase>
-Example: !ud hella
+get_urbandictionary.command = "+ud"
+get_urbandictionary.helptext = """Usage: +ud <word or phrase>
+Example: +ud hella
 Shows urbandictionary definition of a word or phrase.
-!ud alone returns a random entry
-!ud wotd returns the current word of the day"""
++ud alone returns a random entry
++ud wotd returns the current word of the day"""
 
 
 def get_urbandictionary_wotd(self):
