@@ -20,7 +20,7 @@ def quote(self, event):
 	command_handler(event, "quote")
 	return event
 
-quote.command = "!quote"
+quote.command = "+quote"
 quote.helptext = "Use \"" + quote.command + "\" for look up, and \"" + quote.command + " add <quote>\" to create a new one, and \"" + quote.command + " search <string> to search for one"
 
 quote.db = "quote.sqlite"
