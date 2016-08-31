@@ -53,5 +53,5 @@ def get_metacritic(self, e):
         e.output = "%s %s%s%s [ %s ]" % (title, category, metaScore, userScore, short)
     return e
 
-get_metacritic.command = "!mc"
+get_metacritic.command = "+mc"
 
