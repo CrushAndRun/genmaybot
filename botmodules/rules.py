@@ -90,5 +90,5 @@ def isIntegerValue(v):
      except ValueError:
           return False
 
-getRule.command = "!rule"
-getRule.helptext = "!rule <RuleID> : Shows the corresponding velominati rule."
+getRule.command = "+rule"
+getRule.helptext = "+rule <RuleID> : Shows the corresponding velominati rule."
