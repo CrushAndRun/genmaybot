@@ -67,14 +67,14 @@ def get_wolfram(self, e):
             return e
             
 get_wolfram.waitfor_callback = False
-get_wolfram.command = "!wolfram"
-get_wolfram.helptext = "Usage: !wolfram <query>\nExample: !wolfram population of New York City\nPerforms a query through Wolfram|Alpha and returns the first result"
+get_wolfram.command = "+wolfram"
+get_wolfram.helptext = "Usage: +wolfram <query>\nExample: +wolfram population of New York City\nPerforms a query through Wolfram|Alpha and returns the first result"
 
 
 def calc_wolfram (self, e):
     return get_wolfram(self, e)
 calc_wolfram.command = "!c"
-get_wolfram.helptext = "Calculator alias for !wolfram"
+get_wolfram.helptext = "Calculator alias for +wolfram"
 
 def wolfram_time(self, e):
     if e.input:
@@ -88,5 +88,5 @@ def wolfram_time(self, e):
             e.input = "current time in %s" % location
             return get_wolfram(self, e)
             
-wolfram_time.command = "!time"
-wolfram_time.helptext = "Usage: !time to get your local time, !time <nick> to get someone else's local time"
+wolfram_time.command = "+time"
+wolfram_time.helptext = "Usage: +time to get your local time, +time <nick> to get someone else's local time"
