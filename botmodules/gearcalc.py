@@ -5,7 +5,7 @@ def call_gearcalc(self, e):
 	calculator = GearCalc(e.input)
 	e.output = e.nick + ', ' + calculator.solve()
 	return e
-call_gearcalc.command = "!gearcalc"
+call_gearcalc.command = "+gearcalc"
 
 class GearCalc:
 
