@@ -211,10 +211,10 @@ def leafly_search(self, e):
     e.output = strain_line
     return e
 
-leafly_search.command = "!weed"
+leafly_search.command = "+weed"
 leafly_search.helptext = """\
-Usage: !weed <strain name>
-Example: !weed og kush
+Usage: +weed <strain name>
+Example: +weed og kush
 Finds a given strain on Leafly and returns some useful info"""
 
 
