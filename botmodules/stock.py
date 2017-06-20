@@ -1,4 +1,9 @@
-import urllib.request, urllib.error, urllib.parse, csv, json# ,locale
+import urllib.request
+import urllib.error
+import urllib.parse
+import csv
+import json
+import locale
 #try:
 #    locale.setlocale(locale.LC_ALL, 'English_United States')
 #except:
